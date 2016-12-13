@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { LinkContainer } from 'react-router-bootstrap';
+
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
 import Navbar from 'react-bootstrap/lib/Navbar';
@@ -46,8 +48,12 @@ class AppNavigation extends Component {
         <NavbarCollapse>
           <Nav pullRight>
             <NavItem>About</NavItem>
-            <NavItem>Sign Up</NavItem>
-            <NavItem>Log In</NavItem>
+            <LinkContainer to="/signup">
+              <NavItem>Sign Up</NavItem>
+            </LinkContainer>
+            <LinkContainer to="/login">
+              <NavItem>Log In</NavItem>
+            </LinkContainer>
           </Nav>
         </NavbarCollapse>
       </Navbar>
