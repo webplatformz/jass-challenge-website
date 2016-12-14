@@ -11,22 +11,22 @@ class LandingLayout extends Component {
     this.state = { isNavbarTransparent: true };
   }
 
-  handleScroll = () => {
-      const offset = 50;
-      const windowScrollTop = window.pageYOffset;
-      if (windowScrollTop <= offset) {
-        this.setState({ isNavbarTransparent: true });
-      } else {
-        this.setState({ isNavbarTransparent: false });
-      }
+  handleScroll() {
+    const offset = 50;
+    const windowScrollTop = window.pageYOffset;
+    if (windowScrollTop <= offset) {
+      this.setState({ isNavbarTransparent: true });
+    } else {
+      this.setState({ isNavbarTransparent: false });
+    }
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
   }
 
   render() {
@@ -40,5 +40,9 @@ class LandingLayout extends Component {
     );
   }
 }
+
+LandingLayout.propTypes = {
+  children: React.PropTypes.object
+};
 
 export default LandingLayout;

@@ -1,10 +1,9 @@
 import React from 'react';
 
-import Col from 'react-bootstrap/lib/Col';
-import Row from 'react-bootstrap/lib/Row';
-import Button from 'react-bootstrap/lib/Button';
+import { Col, Row, Button } from 'react-bootstrap';
+import { LinkContainer } from 'react-router-bootstrap';
 
-export default (props) => {
+const HeroSection = () => {
   return (
     <div>
       <a name="about"></a>
@@ -13,11 +12,15 @@ export default (props) => {
           <Row>
             <Col lg={12}>
               <div className="intro-message">
-                  <h1>Jass-Challenge</h1>
-                  <h3>Description of Jass-Challenge</h3>
-                  <hr className="intro-divider" />
+                <h1>Jass-Challenge</h1>
+                <h3>Description of Jass-Challenge</h3>
+                <hr className="intro-divider" />
+                <LinkContainer to="/signup">
                   <Button className="transparent">Sign Up Here</Button>
-                  <Button className="transparent">More Information</Button>
+                </LinkContainer>
+                <LinkContainer to="#about">
+                <Button className="transparent">TODO: dead link to about</Button>
+                </LinkContainer>
               </div>
             </Col>
           </Row>
@@ -25,4 +28,6 @@ export default (props) => {
       </div>
     </div>
   );
-}
+};
+
+export default HeroSection;

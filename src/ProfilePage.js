@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { ListGroup, ListGroupItem, Button, FormGroup, FormControl, Form, ControlLabel } from 'react-bootstrap';
+import { ListGroup, ListGroupItem, Button, FormGroup, FormControl, Form } from 'react-bootstrap';
 
 import './LoginPage.css';
 
-export default (props) => {
+const ProfilePage = () => {
   return (
     <div>
       <div className="content-section-b">
@@ -16,7 +16,7 @@ export default (props) => {
             <hr/>
 
             <Form inline>
-              <FormGroup controlId="formInlineName">
+              <FormGroup>
                 <FormControl type="url" placeholder="http://" />
               </FormGroup>
               <Button type="submit">Add</Button>
@@ -40,4 +40,6 @@ export default (props) => {
       </div>
     </div>
   );
-}
+};
+
+export default ProfilePage;

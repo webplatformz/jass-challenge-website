@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Col from 'react-bootstrap/lib/Col';
-import Row from 'react-bootstrap/lib/Row';
+import { Col, Row } from 'react-bootstrap';
 
-export default (props) => {
+const Footer = () => {
   return (
     <footer>
       <div className="container">
@@ -15,4 +14,6 @@ export default (props) => {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

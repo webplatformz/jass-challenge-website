@@ -5,7 +5,7 @@ import './LoginPage.css';
 import { Row, Col, Well, Button, Form, ControlLabel } from 'react-bootstrap';
 import { LinkContainer } from 'react-router-bootstrap';
 
-export default (props) => {
+const LoginPage = () => {
   return (
     <div>
       <a  name="about"></a>
@@ -32,4 +32,6 @@ export default (props) => {
       </div>
     </div>
   );
-}
+};
+
+export default LoginPage;

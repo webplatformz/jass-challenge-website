@@ -1,19 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
 
 import Footer from './Footer';
 import AppNavbar from './AppNavbar';
 
-class Layout extends Component {
-  render() {
-    return (
-      <div>
-        <AppNavbar />
-        {this.props.children}
-        <Footer />
-      </div>
-    );
-  }
-}
+const Layout = ({children}) => {
+  return (
+    <div>
+      <AppNavbar />
+      {children}
+      <Footer />
+    </div>
+  );
+};
+
+Layout.propTypes = {
+  children: React.PropTypes.object
+};
 
 export default Layout;

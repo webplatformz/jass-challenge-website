@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Col from 'react-bootstrap/lib/Col';
-import Row from 'react-bootstrap/lib/Row';
+import { Col, Row } from 'react-bootstrap';
 
-export default (props) => {
+const BotSection = () => {
   return (
     <div>
       <a  name="bots"></a>
@@ -27,4 +26,6 @@ export default (props) => {
       </div>
     </div>
   );
-}
+};
+
+export default BotSection;
