@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 import { LinkContainer } from 'react-router-bootstrap';
+import { Link } from 'react-router';
 
 import Nav from 'react-bootstrap/lib/Nav';
 import NavItem from 'react-bootstrap/lib/NavItem';
@@ -10,38 +11,13 @@ import NavbarBrand from 'react-bootstrap/lib/NavbarBrand';
 import NavbarToggle from 'react-bootstrap/lib/NavbarToggle';
 import NavbarCollapse from 'react-bootstrap/lib/NavbarCollapse';
 
-class AppNavigation extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {transparent: true};
-  }
-
-  handleScroll = () => {
-      const offset = 50;
-      const windowScrollTop = window.pageYOffset;
-      if (windowScrollTop <= offset) {
-        this.setState({transparent: true});
-      } else {
-        this.setState({transparent: false});
-      }
-  }
-
-  componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  render() {
-    const transparent = this.state.transparent;
+export default (props) => {
+    const isTransparent = props.isTransparent;
     return (
-      <Navbar fixedTop className={(transparent ? 'transparent' : '')} ref={"navbar"}>
+      <Navbar fixedTop className={(isTransparent ? 'transparent' : '')}>
         <NavbarHeader>
           <NavbarBrand>
-            <a href="#">Jass-Challenge</a>
+            <Link to="/">Jass-Challenge</Link>
           </NavbarBrand>
           <NavbarToggle />
         </NavbarHeader>
@@ -58,7 +34,4 @@ class AppNavigation extends Component {
         </NavbarCollapse>
       </Navbar>
     );
-  }
 }
-
-export default AppNavigation;

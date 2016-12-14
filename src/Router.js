@@ -6,13 +6,16 @@ import browserHistory from 'react-router/lib/browserHistory';
 // pages
 import Layout from './Layout';
 import Landing from './LandingPage';
+import LandingLayout from './LandingLayout';
 import Login from './LoginPage';
 import Signup from './SignupPage';
 
 export default (props) => (
   <Router history={browserHistory}>
-    <Route component={Layout}>
+    <Route component={LandingLayout}>
       <Route path="/" component={Landing} />
+    </Route>
+    <Route component={Layout}>
       <Route path="login" component={Login} />
       <Route path="signup" component={Signup} />
     </Route>
