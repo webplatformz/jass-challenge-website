@@ -204,3 +204,8 @@ p.copyright {
   color: #777 !important;
   border-radius: 0 !important;
 }
+
+.form-well {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}

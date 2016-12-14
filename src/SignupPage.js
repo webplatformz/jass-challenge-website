@@ -13,7 +13,7 @@ export default (props) => {
           <div className="container">
             <Row>
               <Col md={6} mdOffset={3}>
-                <Well>
+                <Well className="form-well">
                   <h3 className="well-title">Sign Up</h3>
                   <hr/>
                   <Button bsSize="large" block>Sign Up with Github</Button>
