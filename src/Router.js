@@ -13,8 +13,8 @@ export default (props) => (
   <Router history={browserHistory}>
     <Route component={Layout}>
       <Route path="/" component={Landing} />
+      <Route path="login" component={Login} />
+      <Route path="signup" component={Signup} />
     </Route>
-    <Route path="login" component={Login} />
-    <Route path="signup" component={Signup} />
   </Router>
 )
