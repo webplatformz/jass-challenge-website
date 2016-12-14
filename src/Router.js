@@ -9,6 +9,7 @@ import Landing from './LandingPage';
 import LandingLayout from './LandingLayout';
 import Login from './LoginPage';
 import Signup from './SignupPage';
+import Profile from './ProfilePage';
 
 export default (props) => (
   <Router history={browserHistory}>
@@ -18,6 +19,7 @@ export default (props) => (
     <Route component={Layout}>
       <Route path="login" component={Login} />
       <Route path="signup" component={Signup} />
+      <Route path="profile" component={Profile} />
     </Route>
   </Router>
 )
